@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Анкета</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-card">
+      <h1>Анкета</h1>
+      <form id="application-form">
+        <label for="full_name">ФИО:</label>
+        <input type="text" id="full_name" name="full_name" required />
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="birth_date">Дата рождения:</label>
+        <input type="date" id="birth_date" name="birth_date" required />
+
+        <label>Пол:</label>
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="gender" value="male" required />
+            Мужской</label
+          >
+          <label
+            ><input type="radio" name="gender" value="female" required />
+            Женский</label
+          >
+        </div>
+
+        <label>Любимые языки программирования:</label>
+        <div class="checkbox-group" id="languages-container">
+          <!-- Заполняется скриптом -->
+        </div>
+
+        <label for="biography">Биография:</label>
+        <textarea id="biography" name="biography" rows="5"></textarea>
+
+        <div class="contract">
+          <input
+            type="checkbox"
+            id="contract"
+            name="contract"
+            value="1"
+            required
+          />
+          <label for="contract">С контрактом ознакомлен(а)</label>
+        </div>
+
+        <button type="submit">Сохранить</button>
+      </form>
+      <div id="message" class="message"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
